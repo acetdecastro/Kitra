@@ -1,0 +1,16 @@
+{
+  "name": "serino",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:acetdecastro/Kitra.git",
+  "author": "Ace De Castro <acetdecastro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
