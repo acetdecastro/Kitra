@@ -1,8 +1,8 @@
 import { Seeder } from 'typeorm-extension';
 import { DeepPartial, Repository } from 'typeorm';
-import { User } from '../../users/user.entity';
-import { Treasure } from '../../treasures/treasure.entity';
-import { MoneyValue } from '../../treasures/money-value.entity';
+import { User } from '../../users/entities/user.entity';
+import { Treasure } from '../../treasures/entities/treasure.entity';
+import { MoneyValue } from '../../treasures/entities/money-value.entity';
 import {
   users,
   treasures,
