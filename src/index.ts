@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { envConfig } from "./config";
-import { AppDataSource } from "./database";
+import { AppDataSource } from "./database/data-source";
 
 const app = express();
 
