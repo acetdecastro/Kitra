@@ -1,6 +1,9 @@
 import { envConfig } from '../config';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { SeederOptions } from 'typeorm-extension';
+import { User } from '../users/entities/user.entity';
+import { Treasure } from '../treasures/entities/treasure.entity';
+import { MoneyValue } from '../treasures/entities/money-value.entity';
 
 const options: DataSourceOptions & SeederOptions = {
   type: 'mysql',
@@ -19,4 +22,14 @@ const options: DataSourceOptions & SeederOptions = {
   seedTracking: false,
 };
 
-export const AppDataSource = new DataSource(options);
+const AppDataSource = new DataSource(options);
+const UserRepository = AppDataSource.getRepository(User);
+const TreasureRepository = AppDataSource.getRepository(Treasure);
+const MoneyValueRepository = AppDataSource.getRepository(MoneyValue);
+
+export {
+  AppDataSource,
+  UserRepository,
+  TreasureRepository,
+  MoneyValueRepository,
+};
