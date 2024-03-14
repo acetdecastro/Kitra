@@ -1,4 +1,24 @@
-const users = [
+interface IUser {
+  id: number;
+  name: string;
+  age: number;
+  password: string;
+  email: string;
+}
+
+interface ITreasure {
+  id: number;
+  latitude: number;
+  longitude: number;
+  name: string;
+}
+
+interface IMoneyValue {
+  treasure_id: number;
+  amt: number;
+}
+
+const users: IUser[] = [
   { id: 3000, name: 'U1', age: 21, password: '123123', email: 'u1@kitra.abc' },
   { id: 3001, name: 'U2', age: 51, password: '234234', email: 'u2@kitra.abc' },
   { id: 3002, name: 'U3', age: 31, password: '345345', email: 'u3@kitra.abc' },
@@ -7,7 +27,7 @@ const users = [
   { id: 3005, name: 'U6', age: 35, password: '678678', email: 'u6@kitra.abc' },
 ];
 
-const treasures = [
+const treasures: ITreasure[] = [
   { id: 100, latitude: 14.54376481, longitude: 121.0199117, name: 'T1' },
   { id: 101, latitude: 14.55320766, longitude: 121.0557745, name: 'T2' },
   { id: 102, latitude: 14.54464357, longitude: 121.0203656, name: 'T3' },
@@ -28,4 +48,32 @@ const treasures = [
   { id: 117, latitude: 14.47720766, longitude: 120.9867927, name: 'T18' },
 ];
 
-export { users, treasures };
+const moneyValues: IMoneyValue[] = [
+  { treasure_id: 100, amt: 15 },
+  { treasure_id: 101, amt: 10 },
+  { treasure_id: 102, amt: 15 },
+  { treasure_id: 103, amt: 15 },
+  { treasure_id: 104, amt: 10 },
+  { treasure_id: 105, amt: 15 },
+  { treasure_id: 106, amt: 15 },
+  { treasure_id: 107, amt: 10 },
+  { treasure_id: 108, amt: 15 },
+  { treasure_id: 109, amt: 15 },
+  { treasure_id: 110, amt: 10 },
+  { treasure_id: 111, amt: 15 },
+  { treasure_id: 112, amt: 15 },
+  { treasure_id: 113, amt: 10 },
+  { treasure_id: 114, amt: 15 },
+  { treasure_id: 115, amt: 15 },
+  { treasure_id: 116, amt: 10 },
+  { treasure_id: 117, amt: 15 },
+  { treasure_id: 100, amt: 20 },
+  { treasure_id: 101, amt: 25 },
+  { treasure_id: 102, amt: 20 },
+  { treasure_id: 103, amt: 25 },
+  { treasure_id: 107, amt: 30 },
+  { treasure_id: 108, amt: 30 },
+  { treasure_id: 109, amt: 30 },
+];
+
+export { IUser, ITreasure, IMoneyValue, users, treasures, moneyValues };
