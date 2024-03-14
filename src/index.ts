@@ -7,5 +7,5 @@ const app = express();
 app.use(bodyParser.json());
 
 app.listen(envConfig.PORT, () => {
-  console.log(`Server listening on port: ${envConfig.PORT}`);
+  console.log(`Server is listening on port: ${envConfig.PORT}`);
 });
